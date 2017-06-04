@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Conciertos</title>
+        <link rel="stylesheet" href="../css/index.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+        <link rel="shortcut icon" href="img/Logo_sin_fondo.png">
+        <script src="http://openlayers.org/api/2.13.1/OpenLayers.js"></script>
+    </head>
+    <body>
+        <header>
+            <div id="logo">
+            <a href="../index.html" name="inicio"><img id="logoimg" alt="logo" src="img/Logo_sin_fondo.png" /></a>
+            </div>
+            <div id="menu">
+                <a href="../index.html"><div id="quienessomos"></br>Quienes Somos</div></a>
+				<a href="Conciertos.html"><div id="conciertos"></br>Conciertos</div></a>
+				<a href="contacta.html"><div id="contacta"></br>Contacta</div></a>
+            </div>
+        </header>
+        <section>
+            <div id="titulo">
+                <div class="forma"></div>
+                <div class="titleform"><p><font size="6"><b>Proximos conciertos...</b></font></p></div>
+            </div>
+            <div id="cuerpo">
+                <div class="divCon">
+
+                    <div id="div1">
+                        <div class="mes">JUN</div>
+                        <div class="dia">03</div>
+                        <div class="año">2017</div>
+    	            </div>
+
+    	            <div id="div2">
+        	            <div class="lugar">Ciudad Rodrigo, Salamanca</div>
+        	            <div>Palacio de Montarco</div>
+    	            </div>
+
+    	            <div id="map" class="map"></div>
+	  		            <script defer="defer" type="text/javascript">
+
+	    		var map = new OpenLayers.Map('map',
+		  		{
+		    		projection: "EPSG:4326",
+		    		maxExtent: new OpenLayers.Bounds(-10, 34, 5, 44)
+		  		});
+
+				var wms1 = new OpenLayers.Layer.WMS("Mapa Base", "http://www.ign.es/wms-inspire/ign-base",
+					{layers: "IGNBaseTodo", format: "image/png"},
+					{transitionEffect: "resize"});
+
+				var wms2 = new OpenLayers.Layer.WMS("Mapa Satélite", "http://www.ign.es/wms-inspire/pnoa-ma",
+					{layers: "OI.OrthoimageCoverage", format: "image/png"},
+					{transitionEffect: "resize"});
+
+				var point = new OpenLayers.Geometry.Point(-6.53361111111, 40.5988888889);
+
+        		var pointFeature = new OpenLayers.Feature.Vector(point);
+
+        		var vectorLayer = new OpenLayers.Layer.Vector("Lugar");
+
+        		vectorLayer.addFeatures([pointFeature]);
+
+				map.addLayer(wms1);
+				map.addLayer(wms2);
+				map.setCenter(new OpenLayers.LonLat(-6.53361111111, 40.5988888889), 10);
+       			map.addLayer(vectorLayer);
+       			map.addControl(new OpenLayers.Control.LayerSwitcher());
+    		</script>
+	</div>
+	   <br/>
+
+	<div class="divCon">
+
+		<div id="div1">
+            <div class="mes">JUN</div>
+            <div class="dia">04</div>
+            <div class="año">2017</div>
+    	</div>
+
+    	<div id="div2">
+        	<div class="lugar">Jerez de la Frontera, Cádiz</div>
+        	<div>Bodegas Diez Mérito</div>
+    	</div>
+
+    	<div id="map2" class="map"></div>
+   			<script defer="defer" type="text/javascript">
+	    		var map = new OpenLayers.Map('map2',
+		  		{
+		    		projection: "EPSG:4326",
+		    		maxExtent: new OpenLayers.Bounds(-10, 34, 5, 44)
+		  		});
+
+				var wms1 = new OpenLayers.Layer.WMS("Mapa Base", "http://www.ign.es/wms-inspire/ign-base",
+					{layers: "IGNBaseTodo", format: "image/png"},
+					{transitionEffect: "resize"});
+
+				var wms2 = new OpenLayers.Layer.WMS("Mapa Satélite", "http://www.ign.es/wms-inspire/pnoa-ma",
+					{layers: "OI.OrthoimageCoverage", format: "image/png"},
+					{transitionEffect: "resize"});
+
+				var point = new OpenLayers.Geometry.Point(-6.132140 ,36.680678);
+
+        		var pointFeature = new OpenLayers.Feature.Vector(point);
+
+        		var vectorLayer = new OpenLayers.Layer.Vector("Lugar");
+
+        		vectorLayer.addFeatures([pointFeature]);
+
+				map.addLayer(wms1);
+				map.addLayer(wms2);
+				map.setCenter(new OpenLayers.LonLat(-6.132140 ,36.680678), 10);
+       			map.addLayer(vectorLayer);
+       			map.addControl(new OpenLayers.Control.LayerSwitcher());
+    		</script>
+	</div>
+    <br/>
+
+	<div class="divCon">
+
+		<div id="div1">
+            <div class="mes">JUN</div>
+            <div class="dia">04</div>
+            <div class="año">2017</div>
+    	</div>
+
+    	<div id="div2">
+        	<div class="lugar">San José de la Rinconada, Sevilla</div>
+        	<div>Recinto ferial. Caseta Municipal</div>
+    	</div>
+
+    	<div id="map3" class="map"></div>
+   			<script defer="defer" type="text/javascript">
+	    		var map = new OpenLayers.Map('map3',
+		  		{
+		    		projection: "EPSG:4326",
+		    		maxExtent: new OpenLayers.Bounds(-10, 34, 5, 44)
+		  		});
+
+				var wms1 = new OpenLayers.Layer.WMS("Mapa Base", "http://www.ign.es/wms-inspire/ign-base",
+					{layers: "IGNBaseTodo", format: "image/png"},
+					{transitionEffect: "resize"});
+
+				var wms2 = new OpenLayers.Layer.WMS("Mapa Satélite", "http://www.ign.es/wms-inspire/pnoa-ma",
+					{layers: "OI.OrthoimageCoverage", format: "image/png"},
+					{transitionEffect: "resize"});
+
+				var point = new OpenLayers.Geometry.Point(-5.930220, 37.481565);
+
+        		var pointFeature = new OpenLayers.Feature.Vector(point);
+
+        		var vectorLayer = new OpenLayers.Layer.Vector("Lugar");
+
+        		vectorLayer.addFeatures([pointFeature]);
+
+				map.addLayer(wms1);
+				map.addLayer(wms2);
+				map.setCenter(new OpenLayers.LonLat(-5.930220, 37.481565), 10);
+       			map.addLayer(vectorLayer);
+       			map.addControl(new OpenLayers.Control.LayerSwitcher());
+    		</script>
+	</div>
+	<br/>
+	<div class="divCon">
+
+		<div id="div1">
+            <div class="mes">JUN</div>
+            <div class="dia">09</div>
+            <div class="año">2017</div>
+    	</div>
+
+    	<div id="div2">
+        	<div class="lugar">Sevilla, Sevilla</div>
+        	<div>Dadá Bar</div>
+    	</div>
+
+    	<div id="map4" class="map"></div>
+	  		<script defer="defer" type="text/javascript">
+
+	    		var map = new OpenLayers.Map('map4',
+		  		{
+		    		projection: "EPSG:4326",
+		    		maxExtent: new OpenLayers.Bounds(-10, 34, 5, 44)
+		  		});
+
+				var wms1 = new OpenLayers.Layer.WMS("Mapa Base", "http://www.ign.es/wms-inspire/ign-base",
+					{layers: "IGNBaseTodo", format: "image/png"},
+					{transitionEffect: "resize"});
+
+				var wms2 = new OpenLayers.Layer.WMS("Mapa Satélite", "http://www.ign.es/wms-inspire/pnoa-ma",
+					{layers: "OI.OrthoimageCoverage", format: "image/png"},
+					{transitionEffect: "resize"});
+
+				var point = new OpenLayers.Geometry.Point(-6.000839, 37.387508);
+
+        		var pointFeature = new OpenLayers.Feature.Vector(point);
+
+        		var vectorLayer = new OpenLayers.Layer.Vector("Lugar");
+
+        		vectorLayer.addFeatures([pointFeature]);
+
+				map.addLayer(wms1);
+				map.addLayer(wms2);
+				map.setCenter(new OpenLayers.LonLat(-6.000839, 37.387508), 10);
+       			map.addLayer(vectorLayer);
+       			map.addControl(new OpenLayers.Control.LayerSwitcher());
+    		</script>
+	</div>
+	<br/>
+	<div class="divCon">
+
+		<div id="div1">
+            <div class="mes">JUN</div>
+            <div class="dia">17</div>
+            <div class="año">2017</div>
+    	</div>
+
+    	<div id="div2">
+        	<div class="lugar">Huelva, Huelva</div>
+        	<div>Pub The Red Lion</div>
+    	</div>
+
+    	<div id="map5" class="map"></div>
+	  		<script defer="defer" type="text/javascript">
+
+	    		var map = new OpenLayers.Map('map5',
+		  		{
+		    		projection: "EPSG:4326",
+		    		maxExtent: new OpenLayers.Bounds(-10, 34, 5, 44)
+		  		});
+
+				var wms1 = new OpenLayers.Layer.WMS("Mapa Base", "http://www.ign.es/wms-inspire/ign-base",
+					{layers: "IGNBaseTodo", format: "image/png"},
+					{transitionEffect: "resize"});
+
+				var wms2 = new OpenLayers.Layer.WMS("Mapa Satélite", "http://www.ign.es/wms-inspire/pnoa-ma",
+					{layers: "OI.OrthoimageCoverage", format: "image/png"},
+					{transitionEffect: "resize"});
+
+				var point = new OpenLayers.Geometry.Point(-6.947216, 37.254988);
+
+        		var pointFeature = new OpenLayers.Feature.Vector(point);
+
+        		var vectorLayer = new OpenLayers.Layer.Vector("Lugar");
+
+        		vectorLayer.addFeatures([pointFeature]);
+
+				map.addLayer(wms1);
+				map.addLayer(wms2);
+				map.setCenter(new OpenLayers.LonLat(-6.947216, 37.254988), 10);
+       			map.addLayer(vectorLayer);
+       			map.addControl(new OpenLayers.Control.LayerSwitcher());
+    		</script>
+	</div>
+	<br/>
+	<div class="divCon">
+
+		<div id="div1">
+            <div class="mes">JUL</div>
+            <div class="dia">01</div>
+            <div class="año">2017</div>
+    	</div>
+
+    	<div id="div2">
+        	<div class="lugar">Burguillos, Sevilla</div>
+        	<div>Hacienda Águila del rey</div>
+    	</div>
+
+    	<div id="map6" class="map"></div>
+	  		<script defer="defer" type="text/javascript">
+
+	    		var map = new OpenLayers.Map('map6',
+		  		{
+		    		projection: "EPSG:4326",
+		    		maxExtent: new OpenLayers.Bounds(-10, 34, 5, 44)
+		  		});
+
+				var wms1 = new OpenLayers.Layer.WMS("Mapa Base", "http://www.ign.es/wms-inspire/ign-base",
+					{layers: "IGNBaseTodo", format: "image/png"},
+					{transitionEffect: "resize"});
+
+				var wms2 = new OpenLayers.Layer.WMS("Mapa Satélite", "http://www.ign.es/wms-inspire/pnoa-ma",
+					{layers: "OI.OrthoimageCoverage", format: "image/png"},
+					{transitionEffect: "resize"});
+
+				var point = new OpenLayers.Geometry.Point(-6.012459, 37.561228);
+
+        		var pointFeature = new OpenLayers.Feature.Vector(point);
+
+        		var vectorLayer = new OpenLayers.Layer.Vector("Lugar");
+
+        		vectorLayer.addFeatures([pointFeature]);
+
+				map.addLayer(wms1);
+				map.addLayer(wms2);
+				map.setCenter(new OpenLayers.LonLat(-6.012459, 37.561228), 10);
+       			map.addLayer(vectorLayer);
+       			map.addControl(new OpenLayers.Control.LayerSwitcher());
+    		</script>
+	    </div>
+        </section>
+
+
+
+
+
+        <footer>
+        <div id="divlogos">
+            <div class="divlinea">
+                <a href="http://mproducciones.es/" title="Motet producciones" target="_blank"><img id="imgmp" src="img/logoMp.jpg" /></a>
+            </div>
+
+            <div class="divlinea">
+                <a href="https://www.facebook.com/enchufados.rock.9?fref=ts" title="Facebook" target="_blank"><img id="imgfb" src="img/logoFb.png" /></a>
+            </div>
+
+            <div class="divlinea">
+                <a href="https://twitter.com/Enchufa2Rock" title="Twitter" target="_blank"><img id="imgtw" src="img/logoTw.png" /></a>
+            </div>
+
+            <div class="divlinea">
+                <a href="../index.html"><img id="imglogoen" src="img/logoEn.png" /></a>
+            </div>
+
+            <div class="divlinea">
+                <a href="https://www.instagram.com/enchufadosrock/" title="Youtube" target="_blank"><img id="imgyo" src="img/logoYo.png" /></a>
+            </div>
+
+            <div class="divlinea">
+                <a href="https://www.instagram.com/enchufadosrock/" title="Instagram" target="_blank"><img id="imgin" src="img/logoIn.png" /></a>
+            </div>
+
+            <div class="divlinea">
+                <a href="http://www.pimpammusic.com/" title="Pim Pam Music" target="_blank"><img id="imgpp" src="img/logoPp.jpg" /></a>
+            </div>
+        </div>
+
+        <div id="nombres">
+            <div class="nombre">Rodrigo Dávila Acosta - David Bejarano Fraile - Jaime Pueyo Escalante<div>
+        </div>
+
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Contacta</title>
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="shortcut icon" href="img/Logo_sin_fondo.png">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300" rel="stylesheet">
+        <script src="http://openlayers.org/api/2.13.1/OpenLayers.js"></script>
+    </head>
+    <body>
+        <header>
+            <div id="logo">
+            <a href="../index.html" name="inicio"><img id="logoimg" alt="logo" src="img/Logo_sin_fondo.png" /></a>
+            </div>
+            <div id="menu">
+                <a href="../index.html"><div id="quienessomos"></br>Quienes Somos</div></a>
+				<a href="Conciertos.html"><div id="conciertos"></br>Conciertos</div></a>
+				<a href="contacta.html"><div id="contacta"></br>Contacta</div></a>
+            </div>
+        </header>
+        <section>
+            <div id="titulo">
+                    <div class="forma"></div>
+                    <div class="titleform"><p><font size="6"><b>Contacta</b></font></p></div>
+            </div>
+            <div id="cuerpo">
+                <div id="contform">
+                    <h2>Contacto · Actuaciones</h2>
+                    <a href="mailto:jpueesc@gmail.com" target="_top"><img alt="correo logo" src="img/correo.png" class="contlogo"/></a>
+                    <img alt="telefono logo" src="img/telefono.png" class="contlogo" onClick='alert("El telefono era este: (+34)665 664 874")' />
+                    <a href="https://goo.gl/maps/1bZiSZcB4iL2" target="_blank"><img alt="loalizacion logo" src="img/localizacion.png" class="contlogo"/></a>
+                    <h3>Contacto Telefonico</h3></a>
+                    <p>Jaime - (+34)665 664 874</p>
+                    <h3>Contacto Electronico</h3>
+                    <p>Enviar un correo a <a href="mailto:jpueesc@gmail.com" target="_top">Jaime</a></p>
+                </div>
+                <div id="formulario">
+                <form action="../php/contacta.php" method="post">
+				<label for="nombre">Nombre:</label>
+				<input id="nombre" type="text" name="nombre" placeholder="Nombre y Apellido" required />
+				<label for="email">Email:</label>
+				<input id="email" type="email" name="email" placeholder="ejemplo@ejemplo.com" required />
+				<label for="telefono">Teléfono:</label>
+				<input id="telefono" type="number" name="telefono" placeholder="Teléfono" required />
+				<label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required=""></textarea></br>
+				<input id="submit" type="submit" name="submit" value="Enviar" onclick="enviar()"/>
+			</form></div>
+            </div>
+        </section>
+        <footer>
+        <div id="divlogos">
+            <div class="divlinea">
+                <a href="http://mproducciones.es/" title="Motet producciones" target="_blank"><img id="imgmp" src="img/logoMp.jpg" /></a>
+            </div>
+
+            <div class="divlinea">
+                <a href="https://www.facebook.com/enchufados.rock.9?fref=ts" title="Facebook" target="_blank"><img id="imgfb" src="img/logoFb.png" /></a>
+            </div>
+
+            <div class="divlinea">
+                <a href="https://twitter.com/Enchufa2Rock" title="Twitter" target="_blank"><img id="imgtw" src="img/logoTw.png" /></a>
+            </div>
+
+            <div class="divlinea">
+                <a href="../index.html"><img id="imglogoen" src="img/logoEn.png" /></a>
+            </div>
+
+            <div class="divlinea">
+                <a href="https://www.instagram.com/enchufadosrock/" title="Youtube" target="_blank"><img id="imgyo" src="img/logoYo.png" /></a>
+            </div>
+
+            <div class="divlinea">
+                <a href="https://www.instagram.com/enchufadosrock/" title="Instagram" target="_blank"><img id="imgin" src="img/logoIn.png" /></a>
+            </div>
+
+            <div class="divlinea">
+                <a href="http://www.pimpammusic.com/" title="Pim Pam Music" target="_blank"><img id="imgpp" src="img/logoPp.jpg" /></a>
+            </div>
+        </div>
+
+        <div id="nombres">
+            <div class="nombre">Rodrigo Dávila Acosta - David Bejarano Fraile - Jaime Pueyo Escalante<div>
+        </div>
+
+        </footer>
+    </body>
+</html>
